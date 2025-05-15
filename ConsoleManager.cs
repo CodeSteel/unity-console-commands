@@ -58,7 +58,7 @@ namespace Steelbox.Console
                 return;
             }
 
-            LogToConsole(commandName, ConsoleLogType.User);
+            LogToConsole(commandName + " " + string.Join(" ", args), ConsoleLogType.User);
             
             if (_commandMap.TryGetValue(loweredCommandName, out var meta))
             {
